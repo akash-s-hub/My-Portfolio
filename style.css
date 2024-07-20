@@ -260,6 +260,7 @@ p {
 .page2 .right2 {
     height: 100%;
     width: 65%;
+    padding: 5vmax;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -291,7 +292,7 @@ p {
     font-size: 1rem;
     margin-bottom: 2vw;
     font-weight: 200;
-    width: 90%;
+    width: 100%;
     font-size: 1.2vmax;
 }
 
@@ -420,6 +421,7 @@ video.rightbg {
 
 /* responsive designs */
 @media (max-width:600px) {
+    /* page1 */
     nav .tags {
         display: none;
     }
@@ -430,8 +432,20 @@ video.rightbg {
         flex-direction: column;
     }
     .page1 .content .left, .page1 .content .right{
-        width: 90%;
+        width: 100%;
         height: 40%;
+    }
+
+
+    /* page2 */
+    .page2{
+        height: 55%;
+    }
+    .page2 .left2{
+        display: none;
+    }
+    .page2 .right2{
+        width: 100%;
     }
 }
 
