@@ -177,7 +177,7 @@ arrowClick();
 function changeActive() {
     document.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('menu a');
+        const navLinks = document.querySelectorAll('.tags a');
 
         let currentSection = '';
 
