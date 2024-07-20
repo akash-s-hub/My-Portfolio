@@ -72,7 +72,7 @@ timeline.to("button", {
     transition: "all 0.3s ease",
     duration: 0.5
 })
-// landingPageAnimation();
+landingPageAnimation();
 
 //page2 animation as it reach page1
 function page1Exit() {
@@ -101,7 +101,7 @@ function page1Exit() {
         ease: "slow(0.9,0.3,false)"
     }, "page2enter")
 }
-// page1Exit();
+page1Exit();
 
 
 
@@ -121,7 +121,7 @@ function page2Enter() {
         opacity: 0
     }, "page2enter")
 }
-// page2Enter();
+page2Enter();
 
 // page2 animation as it reach page3
 function page2Exit() {
@@ -137,7 +137,7 @@ function page2Exit() {
         opacity: 0
     }, "page3enter")
 }
-// page2Exit();
+page2Exit();
 
 
 
@@ -162,7 +162,7 @@ function page3Enter() {
         duration: 0.4
     }, "page3enter")
 }
-// page3Enter();
+page3Enter();
 
 // page3 animation as it reach page4
 function page3Exit(){
@@ -181,7 +181,7 @@ function page3Exit(){
         duration:0.25
     },"page3exit")
 }
-// page3Exit();
+page3Exit();
 
 
 
