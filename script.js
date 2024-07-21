@@ -33,6 +33,8 @@ function projectHover() {
         leftsrc.style.transform = "scale3d(1.2,1.2,1.2)";
         src.style.transition = "ease-in-out 0.3s"
         leftsrc.style.transition = "ease-in-out 0.3s"
+        src.pause();
+        leftsrc.play();
     });
     leftsrc.addEventListener("mouseout", () => {
         src.style.zIndex = "8";
@@ -43,6 +45,8 @@ function projectHover() {
         leftsrc.style.transform = "scale3d(1,1,1)";
         src.style.transition = "ease-in-out 0.3s"
         leftsrc.style.transition = "ease-in-out 0.3s"
+        src.play();
+        leftsrc.pause();
     });
     src.addEventListener("mouseover", () => {
         src.style.transform = "scale3d(1.1,1.1,1.1)"
@@ -61,6 +65,8 @@ function projectHover() {
         rightsrc.style.transform = "scale3d(1.2,1.2,1.2)";
         src.style.transition = "ease-in-out 0.3s"
         rightsrc.style.transition = "ease-in-out 0.3s"
+        src.pause();
+        rightsrc.play();
     });
     rightsrc.addEventListener("mouseout", () => {
         src.style.zIndex = "8";
@@ -71,6 +77,8 @@ function projectHover() {
         rightsrc.style.transform = "scale3d(1,1,1)";
         src.style.transition = "ease-in-out 0.3s"
         rightsrc.style.transition = "ease-in-out 0.3s"
+        src.play();
+        rightsrc.pause();
     });
 }
 projectHover();
@@ -204,7 +212,7 @@ changeActive();
 
 
 function smoothScroll() {
-    document.querySelectorAll('nav a, .buttonHolder a').forEach(anchor => {
+    document.querySelectorAll('nav a, a.aboutBtn').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
