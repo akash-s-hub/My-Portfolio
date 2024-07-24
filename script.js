@@ -1,3 +1,10 @@
+let hamburger = document.querySelector("#menuBar");
+let cross = document.querySelector("#cross");
+let navItems = document.querySelector(".navItems");
+let aTags = document.querySelectorAll(".navItems a")
+
+
+
 let projectsData = [
     ["./assets/Spotify - Google Chrome 2024-02-14 11-39-44.mp4", "Spotify"],
     ["./assets/Portfolio - Google Chrome 2024-07-18 19-36-50.mp4", "Portfolio"],
@@ -185,7 +192,7 @@ arrowClick();
 function changeActive() {
     document.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.tags a');
+        let navLinks = document.querySelectorAll('.tags a, .navItems a');
 
         let currentSection = '';
 
@@ -212,7 +219,7 @@ changeActive();
 
 
 function smoothScroll() {
-    document.querySelectorAll('nav a, a.aboutBtn').forEach(anchor => {
+    document.querySelectorAll('nav a, a.aboutBtn, .navItems a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -231,3 +238,24 @@ smoothScroll();
 
 
 
+hamburger.addEventListener("click", () => {
+    hamburger.style.display = "none"
+    cross.style.display = "inline-block"
+    navItems.style.display = "flex"
+    gsap.to(".navItems a",{opacity:1, stagger:0.05, duration:0.4, width:"95%"})
+})
+
+cross.addEventListener("click", () => {
+    cross.style.display = "none"
+    hamburger.style.display = "inline-block"
+    navItems.style.display = "none"
+    gsap.to(".navItems a",{opacity:0, width:"0%"})
+})
+
+aTags.forEach(a => {
+    a.onclick = () => {
+        cross.style.display = "none"
+        navItems.style.display = "none"
+        hamburger.style.display = "inline-block"
+    }
+});

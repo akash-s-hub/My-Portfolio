@@ -199,6 +199,16 @@ function animationsBelow600() {
             scrub: 2,
         }
     })
+    let scrollTriggerPg3 = gsap.timeline({
+        scrollTrigger: {
+            scroller: "body",
+            trigger: ".page3",
+            // markers: true,
+            start: "top 80%",
+            end: "top 60%",
+            scrub: 2,
+        }
+    })
     let intermediate3 = gsap.timeline({
         scrollTrigger: {
             scroller: "body",
@@ -244,7 +254,7 @@ function animationsBelow600() {
         })
 
         gsap.from(".right .imgContainer", {
-            y: 100,
+            y: 60,
             duration: 0.4,
             opacity: 0,
             ease: "slow(0.9,0.3,false)",
@@ -303,19 +313,19 @@ function animationsBelow600() {
     function page3Enter() {
         scrollTriggerPg3.from(".projectHeading", {
             opacity: 0,
-            duration: 0.4,
+            duration: 0.2,
             x: -100
         }, "page3enter")
 
         scrollTriggerPg3.from(".projectHolder", {
             opacity: 0,
-            duration: 0.4,
+            duration: 0.2,
             x: 100
         }, "page3enter")
 
         scrollTriggerPg3.from(".projectDescription", {
             opacity: 0,
-            duration: 0.4
+            duration: 0.2
         }, "page3enter")
     }
     page3Enter();
