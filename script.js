@@ -237,25 +237,27 @@ smoothScroll();
 
 
 
+function hamburgerFn() {
+    hamburger.addEventListener("click", () => {
+        hamburger.style.display = "none"
+        cross.style.display = "inline-block"
+        navItems.style.display = "flex"
+        gsap.to(".navItems a", { opacity: 1, stagger: 0.05, duration: 0.4, width: "95%" })
+    })
 
-hamburger.addEventListener("click", () => {
-    hamburger.style.display = "none"
-    cross.style.display = "inline-block"
-    navItems.style.display = "flex"
-    gsap.to(".navItems a",{opacity:1, stagger:0.05, duration:0.4, width:"95%"})
-})
-
-cross.addEventListener("click", () => {
-    cross.style.display = "none"
-    hamburger.style.display = "inline-block"
-    navItems.style.display = "none"
-    gsap.to(".navItems a",{opacity:0, width:"0%"})
-})
-
-aTags.forEach(a => {
-    a.onclick = () => {
+    cross.addEventListener("click", () => {
         cross.style.display = "none"
-        navItems.style.display = "none"
         hamburger.style.display = "inline-block"
-    }
-});
+        navItems.style.display = "none"
+        gsap.to(".navItems a", { opacity: 0, width: "0%" })
+    })
+
+    aTags.forEach(a => {
+        a.onclick = () => {
+            cross.style.display = "none"
+            navItems.style.display = "none"
+            hamburger.style.display = "inline-block"
+        }
+    });
+}
+hamburgerFn();

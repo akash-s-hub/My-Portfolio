@@ -209,24 +209,34 @@ function animationsBelow600() {
             scrub: 2,
         }
     })
-    let intermediate3 = gsap.timeline({
-        scrollTrigger: {
-            scroller: "body",
-            trigger: ".page3",
-            // markers: true,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: 2,
-        }
-    })
-    let intermediate4 = gsap.timeline({
+    let scrollTriggerPg4 = gsap.timeline({
         scrollTrigger: {
             scroller: "body",
             trigger: ".page4",
             // markers: true,
-            start: "top 90%",
+            start: "top 80%",
             end: "top 60%",
             scrub: 2,
+        }
+    })
+    let aboutScrollTriggerPg2 = gsap.timeline({
+        scrollTrigger: {
+            scroller: "body",
+            trigger: ".page2 .right2 .aboutHeading",
+            // markers:true,
+            start: "top 40%",
+            end: "top 20%",
+            scrub: 2
+        }
+    })
+    let headingScrollTriggerPg3 = gsap.timeline({
+        scrollTrigger: {
+            scroller: "body",
+            trigger: ".page3 .projectHeading",
+            // markers:true,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 2
         }
     })
 
@@ -333,17 +343,23 @@ function animationsBelow600() {
 
 
     function page2Exit(){
-        intermediate3.to(".right",{
+        aboutScrollTriggerPg2.to(".page1 .content .right",{
             opacity:0,
-            x: 100,
-            duration:0.25
-        },"page2Exit")
-        intermediate4.to(".right2",{
-            opacity:0,
-            x:50,
-            duration:0.25,
+            x:100
+        })
+        headingScrollTriggerPg3.to(".page2 .aboutHeading",{
+            y:-30,
+            opacity:0
+        })
+        headingScrollTriggerPg3.to(".page2 .journey",{
+            y:-30,
+            opacity:0
+        })
+        headingScrollTriggerPg3.to(".page2 .goals",{
+            y:-30,
+            opacity:0
+        })
 
-        },"page2Exit")
     }
     page2Exit();
 }
