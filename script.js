@@ -2,7 +2,8 @@ let hamburger = document.querySelector("#menuBar");
 let cross = document.querySelector("#cross");
 let navItems = document.querySelector(".navItems");
 let aTags = document.querySelectorAll(".navItems a")
-
+let sun = document.querySelector("#sun")
+let moon = document.querySelector("#moon")
 
 
 let projectsData = [
@@ -261,3 +262,20 @@ function hamburgerFn() {
     });
 }
 hamburgerFn();
+
+
+function toggleMode(){
+    sun.addEventListener("click",()=>{
+        moon.classList.toggle("hidden");
+        sun.classList.toggle("hidden");
+        // window.location.reload();
+        document.body.classList.toggle("darkMode");
+    })
+    moon.addEventListener("click",()=>{
+        moon.classList.toggle("hidden");
+        sun.classList.toggle("hidden");
+        // window.location.reload()
+        document.body.classList.toggle("darkMode");
+    })
+}
+toggleMode()

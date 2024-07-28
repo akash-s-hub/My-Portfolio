@@ -1,0 +1,40 @@
+#old colors
+bgcolor 1  --->   #1f232d
+bgcolor 2  --->   #313743
+
+contrast color --->  #09edfb
+
+navbar hover color ---> #0072ff
+
+button animation from
+    background: "linear-gradient(220deg, #09edfb, #0072ff)",
+    boxShadow: "0 0 5px 5px rgba(0, 114, 255, 0.5)",
+
+
+button animation to
+    background: linear-gradient(0deg, #09edfb, #0072ff);
+    box-shadow: 0 7px 10px rgba(0, 114, 255, 0.7);
+
+
+
+
+#new colors
+bgcolor 1  --->   #121212
+bgcolor 2  --->   #1e1e1e
+
+contrast color --->  #ff5722
+
+navbar hover color ---> #ff9800
+
+button animation from
+    background: "linear-gradient(220deg, #ff5722, #d84315)",
+    boxShadow: "0 0 5px 5px rgba(216, 67, 21, 0.5)",
+
+
+button animation to
+    background: linear-gradient(0deg, #ff5722, #d84315); 
+    box-shadow: 0 7px 10px rgba(216, 67, 21, 0.7); 
+
+
+
+

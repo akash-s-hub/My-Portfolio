@@ -66,12 +66,12 @@ function initAnimations() {
             onComplete: () => { timeline.play() }
         })
     }
-    timeline.to("a.aboutBtn button", {
-        background: "linear-gradient(220deg, #09edfb, #0072ff)",
-        boxShadow: "0 0 5px 5px rgba(0, 114, 255, 0.5)",
-        transition: "all 0.3s ease",
-        duration: 0.5
-    })
+    // timeline.from("a.aboutBtn button", {
+    //     background: "linear-gradient(220deg, #ff5722, #d84315)",
+    //     boxShadow: "0 0 5px 5px rgba(216, 67, 21, 0.5)",
+    //     transition: "all 0.3s ease",
+    //     duration: 0.5
+    // })
     landingPageAnimation();
 
     //page2 animation as it reach page1
@@ -187,7 +187,6 @@ function initAnimations() {
 
 
 
-
 function animationsBelow600() {
     let scrollTriggerPg2 = gsap.timeline({
         scrollTrigger: {
@@ -272,8 +271,8 @@ function animationsBelow600() {
         })
     }
     timeline.to("a.aboutBtn button", {
-        background: "linear-gradient(220deg, #09edfb, #0072ff)",
-        boxShadow: "0 0 5px 5px rgba(0, 114, 255, 0.5)",
+        background: "linear-gradient(220deg, #ff5722, #d84315)",
+        boxShadow: "0 0 5px 5px rgba(216, 67, 21, 0.5)",        
         transition: "all 0.3s ease",
         duration: 0.5
     })
