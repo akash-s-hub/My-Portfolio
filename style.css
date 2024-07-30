@@ -10,6 +10,7 @@
     --button-text: #ffffff;
     --button-hover: rgba(216, 67, 21, 0.7);
 }
+
 .darkMode {
     --background-color-1: #ffffff;
     --background-color-1-less-alpha: #ffffff9e;
@@ -128,22 +129,22 @@ nav .tags a:hover::after {
     width: 100%;
 }
 
-.changeMode{
+.changeMode {
     margin-left: 15%;
     cursor: pointer;
     font-size: 1.8vmax;
     width: 2vmax;
 }
 
-.changeMode:hover{
-    transform: scale3d(1.2,1.2,1.2);
+.changeMode:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
 }
 
-.changeMode .hidden{
+.changeMode .hidden {
     display: none;
 }
 
-.navItems{
+.navItems {
     display: none;
 }
 
@@ -486,6 +487,108 @@ video.rightbg {
     color: var(--text-color);
 }
 
+h2.skillHeading {
+    height: 10%;
+    width: 100%;
+    padding-top: 5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmax;
+    font-weight: 600;
+}
+
+.skillContainer {
+    padding: 5vmax;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vmax;
+}
+
+.skillLeft {
+    height: 90%;
+    width: 30%;
+    padding: 2vmax 1vmax;
+    /* border: 2px solid var(--contrast-color); */
+    background-color: var(--background-color-1);
+    border-radius: 3vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    /* background-color: brown; */
+}
+
+.skillLeft .title {
+    padding: 1vmax;
+    font-size: 1.5vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillLeft i {
+    cursor: pointer;
+}
+
+.skillRight {
+    height: 90%;
+    width: 45%;
+    /* border: 2px solid var(--contrast-color);  */
+    background-color: var(--background-color-1);
+    border-radius: 3vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: lightseagreen; */
+}
+
+.skillRight h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    font-size: 1.3vmax;
+    font-weight: 500;
+}
+
+.skillRight .rectangle {
+    height: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    margin: 0 2vmax;
+    background-color: var(--background-color-2);
+}
+
+.skillRight .rectangle .filledRectangle {
+    height: 5px;
+    width: 0%;
+    background-color: var(--contrast-color);
+    border: none;
+    border-radius: 50px;
+}
+
+.skillRight .codingSkills,
+.skillRight .professionalSkills,
+.skillRight .softSkills {
+    height: 100%;
+    width: 100%;
+    padding: 2vmax 1vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+}
+
+.skillRight .hidden {
+    display: none;
+}
 
 
 /* page5 */
@@ -532,7 +635,7 @@ video.rightbg {
     font-weight: bolder;
 }
 
-.contactLeft a{
+.contactLeft a {
     color: var(--contrast-color);
     font-size: 1.5vmax;
     font-weight: 200;
@@ -540,7 +643,7 @@ video.rightbg {
 }
 
 .contactLeft .contact-email {
-    height: 40%;
+    height: 35%;
     width: 80%;
     background-color: var(--background-color-2);
     border-radius: 1rem;
@@ -554,7 +657,7 @@ video.rightbg {
 }
 
 .contactLeft .contact-number {
-    height: 40%;
+    height: 35%;
     width: 80%;
     background-color: var(--background-color-2);
     border-radius: 1rem;
@@ -573,20 +676,24 @@ video.rightbg {
     height: 90%;
     width: 40%;
     /* background-color: yellowgreen; */
-}
-
-.contactRight form{
-    padding: 1vmax;
-    width: 100%;
-    position: relative;
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.contactRight form {
+    padding-top: 5vmax;
+    width: 100%;
+    height: 80%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 0.5vmax;
 }
 
-.contactRight form fieldset{
+.contactRight form fieldset {
     width: 100%;
     border: 1px solid var(--light-text-color);
     background-color: var(--background-color-1);
@@ -598,7 +705,8 @@ video.rightbg {
     border-radius: 1vmax;
 }
 
-.contactRight form input, .contactRight form textarea{
+.contactRight form input,
+.contactRight form textarea {
     width: 100%;
     height: 100%;
     font-size: 1.5vmax;
@@ -611,17 +719,18 @@ video.rightbg {
     border-radius: 1vmax;
 }
 
-.contactRight form legend{
+.contactRight form legend {
     padding: 0 0.5vmax;
     font-weight: bold;
 }
 
-.contactRight form fieldset:focus-within{
+.contactRight form fieldset:focus-within {
     border: 1.5px solid var(--text-color);
     color: var(--text-color);
+    transform: scale3d(1.05, 1.05, 1.05);
 }
 
-.contactRight .submitBtn{
+.contactRight .submitBtn {
     padding: 1vmax 3vmax;
     border-radius: 1vmax;
     border: none;

@@ -23,7 +23,7 @@ let scrollTriggerPg4 = gsap.timeline({
     scrollTrigger: {
         scroller: "body",
         trigger: ".page4",
-        // markers: true,
+        markers: true,
         start: "top 70%",
         end: "top 40%",
         scrub: 2,
@@ -182,6 +182,18 @@ function initAnimations() {
         }, "page3exit")
     }
     page3Exit();
+
+
+
+    function page4Enter() {
+        scrollTriggerPg4.from(".rectangle .filledRectangle",{
+            width: "0%",
+            opacity:0,
+            duration: 0.5,
+            delay: 2
+        })
+    }
+    page4Enter();
 
 }
 

@@ -20,6 +20,61 @@ let right = document.querySelector(".right-arrow i");
 
 
 
+let codingSkills = document.querySelector(".skillLeft .codingSkills i")
+let professionalSkills = document.querySelector(".skillLeft .professionalSkills i")
+let softSkills = document.querySelector(".skillLeft .softSkills i")
+
+
+let percentageFilled = [
+    [["codingSkills"], ["HTML", "95%"], ["CSS", "60%"], ["JAVASCRIPT", "50%"], ["GSAP","40%"], ["C", "50%"]],
+    [["professionalSkills"], ["Web Development", "60%"], ["App Development", "10%"], ["Freelancing", "2%"], [], []],
+    [["softSkills"], ["Problem Solving", "70%"], ["Mathematics", "95%"], ["Time Management", "70%"], ["communication", "80%"], []]
+];
+let skillRight = document.querySelector(".skillRight");
+let filledRectangle = document.querySelectorAll(".skillRight .filledRectangle")
+
+
+function skillsDataShow() {
+    for (let i = 0; i <= percentageFilled.length - 1; i++) {
+        let outerDiv = document.createElement("div");
+        outerDiv.className = percentageFilled[i][0];
+        skillRight.append(outerDiv)
+
+
+        for (let j = 1; j <= percentageFilled[i].length - 1; j++) {
+            let h2 = document.createElement("h2");
+            outerDiv.append(h2);
+
+            let span = document.createElement("span");
+            let innerDiv = document.createElement("div");
+            let filledDiv = document.createElement("div");
+            let percent = document.createElement("div");
+
+
+            for (let k = 0; k <= percentageFilled[i][j].length - 1; k++) {
+                span.className = ""
+                innerDiv.className = "rectangle"
+                percent.className = "percent"
+
+                span.innerText = percentageFilled[i][j][0];
+                percent.innerText = percentageFilled[i][j][1]
+                
+                filledDiv.className = "filledRectangle"
+                filledDiv.style.width =  percentageFilled[i][j][1]
+            }
+            h2.append(span);
+            h2.append(innerDiv);
+            h2.append(percent);
+            innerDiv.append(filledDiv)
+        }
+    }
+    document.querySelector(".skillRight .professionalSkills").classList.add("hidden")
+    document.querySelector(".skillRight .softSkills").classList.add("hidden")
+    
+}
+skillsDataShow()
+
+
 let i = 0;
 let j = i + 2; //left
 let k = i + 1; //right
@@ -264,14 +319,14 @@ function hamburgerFn() {
 hamburgerFn();
 
 
-function toggleMode(){
-    sun.addEventListener("click",()=>{
+function toggleMode() {
+    sun.addEventListener("click", () => {
         moon.classList.toggle("hidden");
         sun.classList.toggle("hidden");
         // window.location.reload();
         document.body.classList.toggle("darkMode");
     })
-    moon.addEventListener("click",()=>{
+    moon.addEventListener("click", () => {
         moon.classList.toggle("hidden");
         sun.classList.toggle("hidden");
         // window.location.reload()
@@ -279,3 +334,35 @@ function toggleMode(){
     })
 }
 toggleMode()
+
+
+function showSkills() {
+    codingSkills.addEventListener("click", () => {
+        codingSkills.classList.replace("fa-circle", "fa-circle-dot")
+        professionalSkills.classList.replace("fa-circle-dot", "fa-circle")
+        softSkills.classList.replace("fa-circle-dot", "fa-circle")
+
+        document.querySelector(".skillRight .codingSkills").classList.remove("hidden")
+        document.querySelector(".skillRight .professionalSkills").classList.add("hidden")
+        document.querySelector(".skillRight .softSkills").classList.add("hidden")
+    })
+    professionalSkills.addEventListener("click", () => {
+        codingSkills.classList.replace("fa-circle-dot", "fa-circle")
+        professionalSkills.classList.replace("fa-circle", "fa-circle-dot")
+        softSkills.classList.replace("fa-circle-dot", "fa-circle")
+
+        document.querySelector(".skillRight .codingSkills").classList.add("hidden")
+        document.querySelector(".skillRight .professionalSkills").classList.remove("hidden")
+        document.querySelector(".skillRight .softSkills").classList.add("hidden")
+    })
+    softSkills.addEventListener("click", () => {
+        codingSkills.classList.replace("fa-circle-dot", "fa-circle")
+        professionalSkills.classList.replace("fa-circle-dot", "fa-circle")
+        softSkills.classList.replace("fa-circle", "fa-circle-dot")
+
+        document.querySelector(".skillRight .codingSkills").classList.add("hidden")
+        document.querySelector(".skillRight .professionalSkills").classList.add("hidden")
+        document.querySelector(".skillRight .softSkills").classList.remove("hidden")
+    })
+}
+showSkills();
